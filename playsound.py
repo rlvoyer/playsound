@@ -114,7 +114,7 @@ def _playsoundOSX(sound, block = True):
         raise PlaysoundException('Cannot find a sound with filename: ' + sound)
 
     for i in range(5):
-        nssound = NSSound.alloc().initWithContentsOfURL_byReference_(url, True)
+        nssound = NSSound.alloc().initWithContentsOfURL_byReference_(url, False)
         if nssound:
             break
         else:
